@@ -9,16 +9,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    private Animator animator;
+
     private float horizontal;
     [SerializeField] private float speed = 8f;
-    [SerializeField] private float jumpingPower = 16f;
+    [SerializeField] private float jumpingPower = 30f;
     [SerializeField] private float groundDetectionDistance = 0.5f;
     private bool isFacingRight = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -26,14 +28,29 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
-        if (!isFacingRight && horizontal > 0f)
+        if (horizontal > 0f)
         {
-            Flip();
+            animator.SetBool("running", true);
+
+            if (!isFacingRight)
+            {
+                Flip();
+            }
         }
-        else if (isFacingRight && horizontal < 0f)
+        else if (horizontal < 0f)
         {
-            Flip();
+            animator.SetBool("running", true);
+
+            if (isFacingRight)
+            {
+                Flip();
+            }
         }
+        else 
+        {
+            animator.SetBool("running", false);
+        }
+
     }
 
     public void Jump(InputAction.CallbackContext context)
