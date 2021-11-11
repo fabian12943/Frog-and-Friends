@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float groundDetectionDistance = 0.5f;
     private bool isFacingRight = true;
 
-    private enum MovementState { idle, running };
+    private enum MovementState { idle, running, jumping, falling };
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +52,15 @@ public class PlayerMovement : MonoBehaviour
         else 
         {
             state = MovementState.idle;
+        }
+
+        if (rb.velocity.y > .1f)
+        {
+            state = MovementState.jumping;
+        }
+        else if (rb.velocity.y < -.1f)
+        {
+            state = MovementState.falling;
         }
 
         animator.SetInteger("state", (int)state);
