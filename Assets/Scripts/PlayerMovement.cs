@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float groundDetectionDistance = 0.5f;
     private bool isFacingRight = true;
 
+    private enum MovementState { idle, running };
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +29,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        MovementState state;
 
         if (horizontal > 0f)
         {
-            animator.SetBool("running", true);
+            state = MovementState.running;
 
             if (!isFacingRight)
             {
@@ -39,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (horizontal < 0f)
         {
-            animator.SetBool("running", true);
+            state = MovementState.running;
 
             if (isFacingRight)
             {
@@ -48,9 +51,10 @@ public class PlayerMovement : MonoBehaviour
         }
         else 
         {
-            animator.SetBool("running", false);
+            state = MovementState.idle;
         }
 
+        animator.SetInteger("state", (int)state);
     }
 
     public void Jump(InputAction.CallbackContext context)
