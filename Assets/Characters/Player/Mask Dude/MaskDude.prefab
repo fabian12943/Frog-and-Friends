@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3314513065795609942
+--- !u!1 &3116775707911014778
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 131322876342264951}
-  - component: {fileID: 202016677739461059}
-  - component: {fileID: 1076895742072281997}
+  - component: {fileID: 9035253613308841984}
+  - component: {fileID: 9161235981000665233}
+  - component: {fileID: 9208640514171433131}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &131322876342264951
+--- !u!4 &9035253613308841984
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3314513065795609942}
+  m_GameObject: {fileID: 3116775707911014778}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,13 +32,13 @@ Transform:
   m_Father: {fileID: 6665666214574810563}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &202016677739461059
+--- !u!20 &9161235981000665233
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3314513065795609942}
+  m_GameObject: {fileID: 3116775707911014778}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
@@ -75,13 +75,13 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &1076895742072281997
+--- !u!81 &9208640514171433131
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3314513065795609942}
+  m_GameObject: {fileID: 3116775707911014778}
   m_Enabled: 0
 --- !u!1 &6665666214574810561
 GameObject:
@@ -97,9 +97,9 @@ GameObject:
   - component: {fileID: 6665666214574810589}
   - component: {fileID: 6665666214574810562}
   - component: {fileID: 6665666214574810591}
-  - component: {fileID: 5418635297819667186}
+  - component: {fileID: 430224221154523503}
   m_Layer: 0
-  m_Name: Player 4
+  m_Name: MaskDude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,7 +117,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6665666216110787869}
-  - {fileID: 131322876342264951}
+  - {fileID: 9035253613308841984}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 202016677739461059}
+  m_Camera: {fileID: 9161235981000665233}
 --- !u!212 &6665666214574810560
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -275,7 +275,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6367560908665664636, guid: d348dff3819df794186a80cb95777629, type: 3}
+  m_Sprite: {fileID: -6367560908665664636, guid: 3750f45c844123341b9a777a96cb1eca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -301,7 +301,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -351,9 +351,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   speed: 8
-  jumpingPower: 16
+  jumpingPower: 20
   groundDetectionDistance: 0.5
---- !u!95 &5418635297819667186
+--- !u!95 &430224221154523503
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -363,7 +363,7 @@ Animator:
   m_GameObject: {fileID: 6665666214574810561}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4e81a103959e0b346927d51ea6ffe394, type: 2}
+  m_Controller: {fileID: 22100000, guid: a1b2d93d48e503048906c22ac4bf927a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &261914935413938401
+--- !u!1 &3314513065795609942
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3820737466491048946}
-  - component: {fileID: 1809676813772759083}
-  - component: {fileID: 4743250354340611290}
+  - component: {fileID: 131322876342264951}
+  - component: {fileID: 202016677739461059}
+  - component: {fileID: 1076895742072281997}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3820737466491048946
+--- !u!4 &131322876342264951
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 261914935413938401}
+  m_GameObject: {fileID: 3314513065795609942}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,13 +32,13 @@ Transform:
   m_Father: {fileID: 6665666214574810563}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &1809676813772759083
+--- !u!20 &202016677739461059
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 261914935413938401}
+  m_GameObject: {fileID: 3314513065795609942}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
@@ -75,13 +75,13 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4743250354340611290
+--- !u!81 &1076895742072281997
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 261914935413938401}
+  m_GameObject: {fileID: 3314513065795609942}
   m_Enabled: 0
 --- !u!1 &6665666214574810561
 GameObject:
@@ -97,9 +97,9 @@ GameObject:
   - component: {fileID: 6665666214574810589}
   - component: {fileID: 6665666214574810562}
   - component: {fileID: 6665666214574810591}
-  - component: {fileID: 39081143164273404}
+  - component: {fileID: 5418635297819667186}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: PinkMan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,7 +117,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6665666216110787869}
-  - {fileID: 3820737466491048946}
+  - {fileID: 131322876342264951}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 1809676813772759083}
+  m_Camera: {fileID: 202016677739461059}
 --- !u!212 &6665666214574810560
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -275,7 +275,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6367560908665664636, guid: cd947491a13509945aa1b644f9db3ef2, type: 3}
+  m_Sprite: {fileID: -6367560908665664636, guid: d348dff3819df794186a80cb95777629, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -353,7 +353,7 @@ MonoBehaviour:
   speed: 8
   jumpingPower: 16
   groundDetectionDistance: 0.5
---- !u!95 &39081143164273404
+--- !u!95 &5418635297819667186
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -363,7 +363,7 @@ Animator:
   m_GameObject: {fileID: 6665666214574810561}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2204906d72c51d34d8e42efe81fdb9f6, type: 2}
+  m_Controller: {fileID: 22100000, guid: 967a9e692207e334c8edd18853b56550, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
