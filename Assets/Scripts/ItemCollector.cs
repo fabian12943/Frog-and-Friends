@@ -12,6 +12,14 @@ public class ItemCollector : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
+
+    private void Update()
+    {
+        if (AnimatorIsPlaying("Collected"))
+        {
+            Destroy(gameObject);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -22,8 +30,12 @@ public class ItemCollector : MonoBehaviour
             state = ItemState.collected;
         }
 
-        anim.SetInteger("state", (int) state);
+        anim.SetInteger("state", (int)state);
 
-        //TODO: if collected destroy gameobject; display counter 
+    }
+
+    bool AnimatorIsPlaying(string stateName)
+    {
+        return anim.GetCurrentAnimatorStateInfo(0).IsName(stateName);
     }
 }
