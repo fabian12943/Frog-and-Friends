@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemCollector : MonoBehaviour
 {
 
     private Animator anim;
     private enum ItemState { idle, collected, destroyed }
+
+    private int points = 0;
+
+    [SerializeField] private Text pointsText;
 
     private void Start()
     {
@@ -17,6 +22,21 @@ public class ItemCollector : MonoBehaviour
     {
         if (AnimatorIsPlaying("Collected"))
         {
+            if (name.Contains("Apple"))
+            {
+                points++;
+            }
+
+            if (name.Contains("Cherry"))
+            {
+                points = points + 2;
+            }
+
+            if (name.Contains("Pineapple"))
+            {
+                points += 5;
+            }
+            pointsText.text = "Points: " + points;
             Destroy(gameObject);
         }
     }
@@ -31,8 +51,9 @@ public class ItemCollector : MonoBehaviour
         }
 
         anim.SetInteger("state", (int)state);
-
     }
+    
+    //TODO: Put Script into player maybe 
 
     bool AnimatorIsPlaying(string stateName)
     {
