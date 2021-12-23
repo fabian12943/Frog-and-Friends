@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float groundDetectionDistance = 0.5f;
     private bool isFacingRight = true;
 
-    private enum MovementState { idle, running, jumping, falling };
+    private enum MovementState { idle, running, jumping, falling, hit };
 
 
 
