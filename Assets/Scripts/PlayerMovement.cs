@@ -8,8 +8,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private SpriteRenderer sprite;
 
-    private Animator animator;
+    [SerializeField] private Animator animator;
 
     private float horizontal;
     [SerializeField] private float speed = 8f;
@@ -19,11 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     private enum MovementState { idle, running, jumping, falling };
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -35,19 +32,13 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.running;
 
-            if (!isFacingRight)
-            {
-                Flip();
-            }
+            sprite.flipX = false;
         }
         else if (horizontal < 0f)
         {
             state = MovementState.running;
 
-            if (isFacingRight)
-            {
-                Flip();
-            }
+            sprite.flipX = true;
         }
         else 
         {
@@ -82,14 +73,6 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, groundDetectionDistance, groundLayer);
-    }
-
-    private void Flip()
-    {
-        isFacingRight = !isFacingRight;
-        Vector3 localScale = transform.localScale;
-        localScale.x *= -1f;
-        transform.localScale = localScale;
     }
 
     public void Move(InputAction.CallbackContext context)
