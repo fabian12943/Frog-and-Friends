@@ -9,13 +9,12 @@ public class RockHeadMovement : MonoBehaviour
 
     private float startPosX;
     private float startPosY;
-    private bool onReturn = false;
     private float speed = 0f;
 
     [SerializeField] private float acceleration = 0.1f;
     private Animator animator;
 
-    private enum MovementState { blink, up, down };
+    private enum MovementState { blink, up, down, left, rigth };
 
     MovementState state;
 
@@ -30,25 +29,14 @@ public class RockHeadMovement : MonoBehaviour
         if (Vector2.Distance(waypoints[currentWaypointIndex].transform.position, transform.position) < .1f)
         {
             atWaypoint();
-            if (!onReturn)
-            { //Bestimmt nächsten Waypoint
-                currentWaypointIndex++;
-                if (currentWaypointIndex >= waypoints.Length)
-                {
-                    currentWaypointIndex = waypoints.Length - 1;
-                    onReturn = true;
-                }
-            }
-            else
+            //Bestimmt nächsten Waypoint
+            currentWaypointIndex++;
+            if (currentWaypointIndex >= waypoints.Length)
             {
-                currentWaypointIndex--;
-                if (currentWaypointIndex < 0)
-                {
-                    currentWaypointIndex = 0;
-                    onReturn = false;
-                }
+                currentWaypointIndex = 0;
             }
-        }else
+        }
+        else
         {
             resetAnimation();
         }
@@ -56,22 +44,38 @@ public class RockHeadMovement : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypointIndex].transform.position, Time.deltaTime * speed);
     }
 
-    private void atWaypoint() //TODO: determine which waypoint, include remaining animations, create prefab
+    private void atWaypoint()
     {
         speed = 0f;
-        state = MovementState.down;
+        determineNextState();
         animator.SetInteger("state", (int)state);
     }
 
     private void determineNextState()
     {
-        if (transform.position.y > startPosY)
+        if (transform.position.y > startPosY & Mathf.Abs(transform.position.x - startPosX) < .1f)
         {
             state = MovementState.up;
+            startPosX = transform.position.x;
+            startPosY = transform.position.y;
         }
-        else
+        else if (transform.position.y < startPosY & Mathf.Abs(transform.position.x - startPosX) < .1f)
         {
             state = MovementState.down;
+            startPosX = transform.position.x;
+            startPosY = transform.position.y;
+        }
+        else if (transform.position.x > startPosX & Mathf.Abs(transform.position.y - startPosY) < .1f)
+        {
+            state = MovementState.rigth;
+            startPosX = transform.position.x;
+            startPosY = transform.position.y;
+        }
+        else if (transform.position.x < startPosX & Mathf.Abs(transform.position.y - startPosY) < .1f)
+        {
+            state = MovementState.left;
+            startPosX = transform.position.x;
+            startPosY = transform.position.y;
         }
     }
 
