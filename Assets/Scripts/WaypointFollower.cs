@@ -7,25 +7,25 @@ public class WaypointFollower : MonoBehaviour
     [SerializeField] private GameObject[] waypoints;
     private int currentWaypointIndex = 0;
     private bool onReturn = false;
+    [SerializeField] private float speed;
 
-    [SerializeField] private float speed = 2f;
     private void Update()
     {
         if (Vector2.Distance(waypoints[currentWaypointIndex].transform.position, transform.position) < .1f)
         {
-            if (!onReturn) 
+            if (!onReturn)
             {
                 currentWaypointIndex++;
-                if (currentWaypointIndex >= waypoints.Length) 
+                if (currentWaypointIndex >= waypoints.Length)
                 {
                     currentWaypointIndex = waypoints.Length - 1;
                     onReturn = true;
                 }
             }
-            else 
+            else
             {
                 currentWaypointIndex--;
-                if (currentWaypointIndex < 0) 
+                if (currentWaypointIndex < 0)
                 {
                     currentWaypointIndex = 0;
                     onReturn = false;
