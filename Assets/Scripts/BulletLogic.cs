@@ -25,4 +25,6 @@ public class BulletLogic : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
     }
+
+    // TODO: destroy condition, boxcollider, deadly tag 
 }
