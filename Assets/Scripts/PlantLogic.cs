@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PlantLogic : MonoBehaviour
 {
-    [SerializeField] private float shotSpeed;
+    [SerializeField] private float startTimeBtwShots;
+    private float timeBtwShots;
 
-    [SerializeField] private float shotDistance;
-
-    [SerializeField] private float engagementDistance;
+    [SerializeField] private float stoppingDistance;
 
     [SerializeField] private GameObject project;
 
@@ -18,17 +17,28 @@ public class PlantLogic : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        
+        timeBtwShots = startTimeBtwShots;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, player.position) < engagementDistance)
+        if (Vector2.Distance(transform.position, player.position) < stoppingDistance)
         {
-
+            Debug.Log("Player within range:" + Vector2.Distance(transform.position, player.position));
+            if (timeBtwShots <= 0)
+            {
+                // Instantiate(project, transform.position, Quaternion.identity);
+                timeBtwShots = startTimeBtwShots;
+            }else
+            {
+                timeBtwShots -= Time.deltaTime;
+            }
         }
     }
 
-    // TODO: Weiter machen Vid Minute 6:24. Es fehlt die eigentliche Schuss logik und was passiert wenn der player getroffen wird -> fabi frgaen
+    // TODO: anstatt das mit distace zu machen, wäre ne box colli besser der als trigger event fungiert, aka wenn spieler in boxcolli reinkommt anim ändern und bullet instanci
     //prefab 
 }
