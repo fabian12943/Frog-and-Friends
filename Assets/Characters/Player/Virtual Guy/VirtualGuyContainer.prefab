@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 3121489022172630857}
   - component: {fileID: 6283651774843002970}
   - component: {fileID: 2077728900385207203}
+  - component: {fileID: 1687679098004997491}
   m_Layer: 0
   m_Name: VirtualGuy
   m_TagString: Player
@@ -389,6 +390,18 @@ MonoBehaviour:
   - {fileID: 3897585681054419630, guid: bfe43afe369712f41899ff7535db0b4d, type: 3}
   playerRenderer: {fileID: 4792868853203460413}
   respawnDelayInSeconds: 1.5
+--- !u!114 &1687679098004997491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3121489022172630871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b171f1ff1ba1ba4d91b6588cdc75a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3121489022786430868
 GameObject:
   m_ObjectHideFlags: 0
