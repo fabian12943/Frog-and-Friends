@@ -34,7 +34,7 @@ public class PlayerExplode : MonoBehaviour
         playerRenderer.GetComponent<Renderer>().enabled = true;
         gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-        gameObject.transform.position = new Vector3(8, 1, 0);
+        gameObject.transform.position = gameObject.GetComponent<PlayerSpawn>().GetSpawnLocation();
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
     }
 }
