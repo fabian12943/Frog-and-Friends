@@ -788,33 +788,6 @@
                     "isPartOfComposite": false
                 }
             ]
-        },
-        {
-            "name": "Spawn",
-            "id": "b1acf205-e6c1-4fde-913d-7d1facd476b5",
-            "actions": [
-                {
-                    "name": "SpawnAtLocation",
-                    "type": "Button",
-                    "id": "fec9ac79-5515-4bae-a802-7ed01fc2f9cd",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "78d5be85-c439-4575-90c4-acc43c13ac89",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SpawnAtLocation",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
         }
     ],
     "controlSchemes": [
