@@ -94,7 +94,7 @@ MonoBehaviour:
         m_Action: Join
         m_Flags: 0
     m_Reference: {fileID: 6897780433237317696, guid: 77b9ed69abf173643bc005f43be5369a, type: 3}
-  m_PlayerPrefab: {fileID: 6665666214574810561, guid: 3ef6fabacc77c7c41be5bc0a8c795522, type: 3}
+  m_PlayerPrefab: {fileID: 5616248007512159604, guid: 06b28e8e46eda174c8a26ac632c941ee, type: 3}
   m_SplitScreen: 1
   m_MaintainAspectRatioInSplitScreen: 0
   m_FixedNumberOfSplitScreens: -1
@@ -117,10 +117,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players:
-  - {fileID: 6665666214574810561, guid: 3ef6fabacc77c7c41be5bc0a8c795522, type: 3}
-  - {fileID: 6665666214574810561, guid: 85c6fe59205f3a344bbec50a240af41a, type: 3}
-  - {fileID: 6665666214574810561, guid: c31006d1912976c41a65620b9a469abc, type: 3}
-  - {fileID: 6665666214574810561, guid: 80abc3010dbfbbe499761243501bf6c3, type: 3}
+  - {fileID: 5616248007512159604, guid: 06b28e8e46eda174c8a26ac632c941ee, type: 3}
+  - {fileID: 2900359065614869094, guid: 985c5d3ae4bd76448af39e5dac2dfd7b, type: 3}
+  - {fileID: 9137052811624737635, guid: 30f2dab6cbae2ea418567521f9384895, type: 3}
+  - {fileID: 6816779548896995708, guid: 8f3c28b03524b2f418939dfc7ce120be, type: 3}
 --- !u!114 &4611729619751920207
 MonoBehaviour:
   m_ObjectHideFlags: 0

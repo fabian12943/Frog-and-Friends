@@ -12,6 +12,8 @@ public class HeadDetectScript : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        Destroy(Enemy);
+        if (other.gameObject.tag == "Player") {
+            Destroy(Enemy);
+        }
     }
 }

@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 30f;
     [SerializeField] private float groundDetectionDistance = 0.5f;
-    private bool isFacingRight = true;
 
     private enum MovementState { idle, running, jumping, falling, hit };
 
