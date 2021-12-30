@@ -363,10 +363,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 5
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -418,7 +418,7 @@ MonoBehaviour:
   sprite: {fileID: 708556604843858627}
   animator: {fileID: 5332696356490451164}
   speed: 8
-  jumpingPower: 20
+  jumpingPower: 16
   groundDetectionDistance: 0.5
 --- !u!114 &7010211043564179950
 MonoBehaviour:
