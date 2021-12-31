@@ -9,11 +9,20 @@ public class PlantLogic : MonoBehaviour
 
     [SerializeField] private GameObject project;
 
+    enum State { idle, attack }
+
+    private State state;
+
+    private Animator animator;
     private bool playerInside = false;
+
+    private Vector3 bulletPosition;
     // Start is called before the first frame update
     void Start()
     {
         timeBtwShots = startTimeBtwShots;
+        animator = GetComponent<Animator>();
+        bulletPosition = new Vector3(transform.position.x + 1.12f, transform.position.y + .28f, -100);
     }
 
     // Update is called once per frame
@@ -24,7 +33,7 @@ public class PlantLogic : MonoBehaviour
             if (timeBtwShots <= 0)
             {
 
-                Instantiate(project, transform.position, Quaternion.identity);
+                Instantiate(project, bulletPosition, Quaternion.identity);
                 timeBtwShots = startTimeBtwShots;
             }
             else
@@ -33,15 +42,14 @@ public class PlantLogic : MonoBehaviour
             }
         }
     }
-
-    //TODO: prefab, enum animation state, switch animation wen trigger and exit 
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             playerInside = true;
+            state = State.attack;
         }
+        animator.SetInteger("state", (int)state);
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -49,6 +57,8 @@ public class PlantLogic : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             playerInside = false;
+            state = State.idle;
         }
+        animator.SetInteger("state", (int)state);
     }
 }
