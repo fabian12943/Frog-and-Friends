@@ -96,8 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a731742c7fec61246b3eaa552244ef8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  shotDistance: 25
+  speed: 10
+  shotDistance: 25.78
   flipped: 1
 --- !u!61 &6741194296592810512
 BoxCollider2D:

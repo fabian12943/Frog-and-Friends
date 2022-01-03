@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  shotDistance: 7
+  shotDistance: 1.79
   flipped: 0
 --- !u!61 &6741194296592810512
 BoxCollider2D:
