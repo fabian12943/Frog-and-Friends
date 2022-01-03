@@ -9,11 +9,17 @@ public class BulletLogic : MonoBehaviour
 
     [SerializeField] private float shotDistance;
 
+    [SerializeField] private bool flipped;
+
     private Vector2 target;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (flipped)
+        {
+            shotDistance *= -1;
+        }
         target = new Vector2(shotDistance, transform.position.y);
     }
 
@@ -26,7 +32,14 @@ public class BulletLogic : MonoBehaviour
 
     private void DestroyBullet()
     {
-        if (transform.position.x >= shotDistance)
+        if (flipped)
+        {
+            if (transform.position.x == shotDistance)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else if (transform.position.x >= shotDistance)
         {
             Destroy(gameObject);
         }

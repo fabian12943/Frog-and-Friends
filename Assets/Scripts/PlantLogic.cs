@@ -16,13 +16,22 @@ public class PlantLogic : MonoBehaviour
     private Animator animator;
     private bool playerInside = false;
 
+    [SerializeField] private bool flipped;
+
     private Vector3 bulletPosition;
     // Start is called before the first frame update
     void Start()
     {
         timeBtwShots = startTimeBtwShots;
         animator = GetComponent<Animator>();
-        bulletPosition = new Vector3(transform.position.x + 1.12f, transform.position.y + .28f, -100);
+        
+        if (flipped)
+        {
+            bulletPosition = new Vector3(transform.position.x - 1f, transform.position.y + .16f, -100);
+        }else
+        {
+            bulletPosition = new Vector3(transform.position.x + 1.12f, transform.position.y + .28f, -100);
+        }
     }
 
     // Update is called once per frame
