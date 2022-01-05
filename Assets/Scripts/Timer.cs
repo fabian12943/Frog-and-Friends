@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private float timeRemaining = 6; //==> 10Min Gametime
+    private float timeRemaining;
     private bool timerIsRunning = false;
 
     [SerializeField] private Text timeText;
 
+    private void Start() {
+        timeRemaining = PlayerPrefs.GetInt("matchDuration", 5) * 30.0f;
+    }
 
     private void Update()
     {
