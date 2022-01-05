@@ -24,7 +24,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        if (GameObject.FindGameObjectsWithTag("Player").Length == PlayerPrefs.GetInt("noOfPlayers", 1))
+        {
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        }
+
         MovementState state;
 
         if (horizontal > 0f)

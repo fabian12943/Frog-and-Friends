@@ -72,7 +72,7 @@ public class MenuButtonFunctions : MonoBehaviour
 
     public void SelectNoOfPlayers(int noOfPlayers)
     {
-        PlayerPrefs.SetFloat("noOfPlayers", noOfPlayers);
+        PlayerPrefs.SetInt("noOfPlayers", noOfPlayers);
         StartLevel();
     }
 

@@ -12,19 +12,13 @@ public class Timer : MonoBehaviour
     [SerializeField] private Text timeText;
 
 
-    private void Start()
-    {
-        // Starts the timer automatically
-        timerIsRunning = true;
-    }
-
     private void Update()
     {
+        DisplayTime(timeRemaining);
         if (timerIsRunning)
         {
             if (timeRemaining > 0)
             {
-                DisplayTime(timeRemaining);
                 timeRemaining -= Time.deltaTime;
             }
             else
@@ -36,10 +30,13 @@ public class Timer : MonoBehaviour
         }
     }
 
+    public void StartTimer()
+    {
+        timerIsRunning = true;
+    }
+
     private void DisplayTime(float timeToDisplay)
     {
-        timeToDisplay += 1;
-
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
