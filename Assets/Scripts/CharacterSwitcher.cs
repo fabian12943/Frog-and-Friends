@@ -16,7 +16,7 @@ public class CharacterSwitcher : MonoBehaviour
         index += 1;
     }
 
-    public void SwitchNextSpawnCharacter(PlayerInput input) 
+    public void SwitchNextSpawnCharacter(PlayerInput input)
     {
         manager.playerPrefab = players[index % players.Count];
         index += 1;
