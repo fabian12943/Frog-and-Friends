@@ -15,6 +15,8 @@ public class MenuButtonFunctions : MonoBehaviour
     int selectedLevel = 0;
 
     private void Start() {
+        Application.targetFrameRate = 60;
+
         parentObject = gameObject.transform.parent.gameObject;
 
         mainButtonGroup = GetChildWithName(parentObject, "MainButtonGroup");
@@ -83,6 +85,8 @@ public class MenuButtonFunctions : MonoBehaviour
             case 1: SceneManager.LoadScene("SampleScene");
                     break;
         }
+
+        SceneManager.UnloadSceneAsync("Menu");
     }
 
     private GameObject GetChildWithName(GameObject obj, string name)
