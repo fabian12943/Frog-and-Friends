@@ -414,6 +414,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa9b8c8160a67b4b941a4d988aefe59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: Ninja Frog
+  image: {fileID: -6367560908665664636, guid: cd947491a13509945aa1b644f9db3ef2, type: 3}
+  animator: {fileID: 0}
+  points: 0
+  deaths: 0
 --- !u!1 &6963069538617798904
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,13 +23,16 @@ public class PauseMenuController : MonoBehaviour
 
     public void PauseOrUnpauseGame()
     {
-        if (!isGamePaused)
+        if (Timer.timeRemaining > 0) 
         {
-            PauseGame();
-        }
-        else
-        {
-            UnpauseGame();
+            if (!isGamePaused)
+            {
+                PauseGame();
+            }
+            else
+            {
+                UnpauseGame();
+            }
         }
     }
 

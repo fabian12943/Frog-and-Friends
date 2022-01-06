@@ -384,6 +384,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa9b8c8160a67b4b941a4d988aefe59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: Mask Dude
+  image: {fileID: -6367560908665664636, guid: 3750f45c844123341b9a777a96cb1eca, type: 3}
+  animator: {fileID: 0}
   points: 0
   deaths: 0
 --- !u!1 &885678363093116541
