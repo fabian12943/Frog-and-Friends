@@ -52,3 +52,6 @@ TagManager:
   - name: Terrain
     uniqueID: 198184113
     locked: 0
+  - name: Text
+    uniqueID: 2060222501
+    locked: 0

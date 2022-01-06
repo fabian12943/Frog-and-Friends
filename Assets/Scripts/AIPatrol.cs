@@ -10,10 +10,10 @@ public class AIPatrol : MonoBehaviour
     public bool mustPatrol;
     private bool mustTurn;
 
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
     public Transform groundCheckPos;
     public LayerMask groundLayer;
-    public Collider2D bodyCollider;
+    private Collider2D bodyCollider;
     private Animator animator;
     private enum MovementState { idle, running, jumping, falling, hit };
     MovementState state;
@@ -23,6 +23,8 @@ public class AIPatrol : MonoBehaviour
     {
         mustPatrol = true;
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        bodyCollider = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
