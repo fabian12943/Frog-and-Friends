@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 3567693205138373265}
   - component: {fileID: 761751668934778976}
   - component: {fileID: 4279307260724150806}
+  - component: {fileID: 1704576360380065489}
   m_Layer: 0
   m_Name: MaskDude
   m_TagString: Player
@@ -371,6 +372,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b171f1ff1ba1ba4d91b6588cdc75a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1704576360380065489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885678362616188606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa9b8c8160a67b4b941a4d988aefe59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 0
+  deaths: 0
 --- !u!1 &885678363093116541
 GameObject:
   m_ObjectHideFlags: 0

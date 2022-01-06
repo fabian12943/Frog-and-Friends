@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 6283651774843002970}
   - component: {fileID: 2077728900385207203}
   - component: {fileID: 1687679098004997491}
+  - component: {fileID: 1274387829774699731}
   m_Layer: 0
   m_Name: VirtualGuy
   m_TagString: Player
@@ -402,6 +403,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b171f1ff1ba1ba4d91b6588cdc75a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1274387829774699731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3121489022172630871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa9b8c8160a67b4b941a4d988aefe59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 0
+  deaths: 0
 --- !u!1 &3121489022786430868
 GameObject:
   m_ObjectHideFlags: 0

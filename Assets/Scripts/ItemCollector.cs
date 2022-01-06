@@ -27,6 +27,7 @@ public class ItemCollector : MonoBehaviour
             {
                 points += 5;
             }
+            GetComponent<PlayerStats>().points = points;
             pointsText.text = "Points: " + points;
         }
     }   

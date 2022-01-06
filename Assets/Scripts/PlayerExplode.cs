@@ -14,6 +14,8 @@ public class PlayerExplode : MonoBehaviour
     {
         if (other.gameObject.tag == "Deadly")
         {
+            GetComponent<PlayerStats>().deaths += 1;
+
             Instantiate(blood, transform.position, Quaternion.identity);
             foreach(GameObject bodyPart in bodyParts) 
             {

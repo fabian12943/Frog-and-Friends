@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 1207277498502895493}
   - component: {fileID: 6135955543689202068}
   - component: {fileID: 5528245123542367562}
+  - component: {fileID: 3930372881279178131}
   m_Layer: 0
   m_Name: NinjaFrog
   m_TagString: Player
@@ -399,6 +400,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b171f1ff1ba1ba4d91b6588cdc75a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3930372881279178131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6963069537050613819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa9b8c8160a67b4b941a4d988aefe59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6963069538617798904
