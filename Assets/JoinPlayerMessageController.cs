@@ -27,7 +27,14 @@ public class JoinPlayerMessageController : MonoBehaviour
             gameObject.SetActive(true);
         }
 
-        textMesh.text = "Waiting for " + (playersAmountTotal - spawnedPlayersAmount) + " more player(s).";
+        if (playersAmountTotal - spawnedPlayersAmount == 1)
+        {
+            textMesh.text = "Waiting for 1 more player.";
+        }
+        else
+        {
+            textMesh.text = "Waiting for " + (playersAmountTotal - spawnedPlayersAmount) + " more players.";
+        }
     }
 
     private GameObject GetChildWithName(GameObject obj, string name)

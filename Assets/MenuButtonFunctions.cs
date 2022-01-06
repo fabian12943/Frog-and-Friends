@@ -85,8 +85,6 @@ public class MenuButtonFunctions : MonoBehaviour
             case 1: SceneManager.LoadScene("SampleScene");
                     break;
         }
-
-        SceneManager.UnloadSceneAsync("Menu");
     }
 
     private GameObject GetChildWithName(GameObject obj, string name)
