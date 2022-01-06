@@ -82,7 +82,7 @@ public class MenuButtonFunctions : MonoBehaviour
     {
         switch(selectedLevel)
         {
-            case 1: SceneManager.LoadScene("SampleScene");
+            case 1: SceneManager.LoadScene("Level 1");
                     break;
         }
     }
