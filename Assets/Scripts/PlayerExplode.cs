@@ -6,9 +6,15 @@ public class PlayerExplode : MonoBehaviour
 {
     public GameObject blood;
     public GameObject[] bodyParts;
-    public Renderer playerRenderer;
+    private SpriteRenderer playerRenderer;
+    private Animator playerAnimator;
 
     public float respawnDelayInSeconds = 1.5f;
+
+    private void Start() {
+        playerRenderer = GetComponentInChildren<SpriteRenderer>();
+        playerAnimator = GetComponentInChildren<Animator>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
@@ -40,5 +46,7 @@ public class PlayerExplode : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         gameObject.transform.position = gameObject.GetComponent<PlayerSpawn>().GetSpawnLocation();
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
+
+        playerAnimator.Play("Player_Appearing");
     }
 }
