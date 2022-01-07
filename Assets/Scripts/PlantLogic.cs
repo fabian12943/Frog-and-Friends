@@ -24,13 +24,14 @@ public class PlantLogic : MonoBehaviour
     {
         timeBtwShots = startTimeBtwShots;
         animator = GetComponent<Animator>();
-        
+
         if (flipped)
         {
-            bulletPosition = new Vector3(transform.position.x - 1f, transform.position.y + .16f, -100);
-        }else
+            bulletPosition = new Vector3(transform.position.x - 1f, transform.position.y + .16f, 0);
+        }
+        else
         {
-            bulletPosition = new Vector3(transform.position.x + 1.12f, transform.position.y + .28f, -100);
+            bulletPosition = new Vector3(transform.position.x + 1.12f, transform.position.y + .28f, 0);
         }
     }
 
@@ -41,7 +42,6 @@ public class PlantLogic : MonoBehaviour
         {
             if (timeBtwShots <= 0)
             {
-
                 Instantiate(project, bulletPosition, Quaternion.identity);
                 timeBtwShots = startTimeBtwShots;
             }

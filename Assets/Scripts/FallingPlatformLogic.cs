@@ -11,7 +11,7 @@ public class FallingPlatformLogic : MonoBehaviour
     [SerializeField] private float timeToDrop;
     [SerializeField] private float timeToDelete;
 
-    private enum State {idle, off}
+    private enum State { idle, off }
 
     private State state;
 
@@ -28,7 +28,7 @@ public class FallingPlatformLogic : MonoBehaviour
         {
             Invoke("DropPlatfrom", timeToDrop);
             state = State.off;
-            anim.SetInteger("state", (int) state);
+            anim.SetInteger("state", (int)state);
             Destroy(gameObject, timeToDelete);
         }
     }
@@ -37,6 +37,4 @@ public class FallingPlatformLogic : MonoBehaviour
     {
         rb.isKinematic = false;
     }
-
-    //TODO: off animation noch mal versuchen, maybe geht ja doch
 }
