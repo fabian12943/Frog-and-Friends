@@ -16,6 +16,8 @@ public class PlayerExplode : MonoBehaviour
         {
             GetComponent<PlayerStats>().deaths += 1;
 
+            GetComponent<PlayerAudioController>().PlayExplodeSound();
+
             Instantiate(blood, transform.position, Quaternion.identity);
             foreach(GameObject bodyPart in bodyParts) 
             {

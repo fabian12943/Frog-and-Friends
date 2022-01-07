@@ -141,12 +141,14 @@ GameObject:
   - component: {fileID: 6963069537050613817}
   - component: {fileID: 6963069537050613798}
   - component: {fileID: 6963069537050613799}
+  - component: {fileID: 2959952303061430531}
   - component: {fileID: 6963069537050613816}
   - component: {fileID: 6963069537050613797}
   - component: {fileID: 1207277498502895493}
   - component: {fileID: 6135955543689202068}
   - component: {fileID: 5528245123542367562}
   - component: {fileID: 3930372881279178131}
+  - component: {fileID: 6372006875032334841}
   m_Layer: 0
   m_Name: NinjaFrog
   m_TagString: Player
@@ -306,6 +308,102 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!82 &2959952303061430531
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6963069537050613819}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!61 &6963069537050613816
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -416,9 +514,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Ninja Frog
   image: {fileID: -6367560908665664636, guid: cd947491a13509945aa1b644f9db3ef2, type: 3}
-  animator: {fileID: 0}
   points: 0
   deaths: 0
+--- !u!114 &6372006875032334841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6963069537050613819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38c4e381e18de1f40900830b5ccbdd19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerExplodeSounds:
+  - {fileID: 8300000, guid: 06708a048f1af8245b4bba71ab92ca40, type: 3}
+  - {fileID: 8300000, guid: bb13edde171bd9e459a1eb193ab26f43, type: 3}
+  - {fileID: 8300000, guid: cff375923036ca745873dce3094b81f9, type: 3}
+  playerExplodeVolume: 1
+  playerJumpSound: {fileID: 0}
+  playerJumpVolume: 0
 --- !u!1 &6963069538617798904
 GameObject:
   m_ObjectHideFlags: 0
