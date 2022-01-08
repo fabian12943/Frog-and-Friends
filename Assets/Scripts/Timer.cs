@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class Timer : MonoBehaviour
 {
@@ -21,13 +22,19 @@ public class Timer : MonoBehaviour
         if (timerIsRunning)
         {
             if (timeRemaining > 0)
-            {
+            {   
+                int[] announcerTimes = {240, 180, 120, 60, 30, 10};
+                if (Array.Exists(announcerTimes, x => x == (int)timeRemaining))
+                {
+                    GameObject.Find("Announcer").GetComponent<AnnouncerController>().AnnounceTimeRemaining((int)timeRemaining);
+                }
                 timeRemaining -= Time.deltaTime;
             }
             else
             {
                 timeRemaining = 0;
                 timerIsRunning = false;
+                GameObject.Find("Announcer").GetComponent<AnnouncerController>().CommentOnMatchResults();
             }
         }
     }

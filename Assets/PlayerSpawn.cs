@@ -5,12 +5,18 @@ using UnityEngine;
 public class PlayerSpawn : MonoBehaviour
 {   
     private GameObject[] spawnpoints;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        animator = GetComponentInChildren<Animator>();
+
         spawnpoints = GameObject.FindGameObjectsWithTag("Spawnpoint");
         gameObject.transform.position = GetSpawnLocation();
+
+        animator.Play("Player_Appearing");
+        GetComponent<PlayerAudioController>().PlaySpawnSound();
     }
 
     // Update is called once per frame

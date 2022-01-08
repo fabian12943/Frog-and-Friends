@@ -8,9 +8,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private SpriteRenderer sprite;
 
-    [SerializeField] private Animator animator;
+    private SpriteRenderer sprite;
+    private Animator animator;
 
     private float horizontal;
     [SerializeField] private float speed = 8f;
@@ -19,7 +19,10 @@ public class PlayerMovement : MonoBehaviour
 
     private enum MovementState { idle, running, jumping, falling, hit };
 
-
+    void Start() {
+        sprite = GetComponentInChildren<SpriteRenderer>();
+        animator = GetComponentInChildren<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -65,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
         if (context.performed && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            GetComponent<PlayerAudioController>().PlayJumpSound();
         }
 
         if (context.canceled && rb.velocity.y > 0f)
