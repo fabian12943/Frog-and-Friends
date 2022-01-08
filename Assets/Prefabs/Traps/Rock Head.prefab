@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1642585923727048680}
   - component: {fileID: 7345824088285873919}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerDeadDetect
   m_TagString: Deadly
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 2670917887406253387}
   - component: {fileID: 2670917887406253386}
   - component: {fileID: 2670917887406253384}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
