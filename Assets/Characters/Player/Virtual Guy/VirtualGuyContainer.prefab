@@ -420,8 +420,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38c4e381e18de1f40900830b5ccbdd19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNameShouting: {fileID: 8300000, guid: 51537b4a0beeb024894e43dc42fc04fc, type: 3}
+  playerNameShoutingVolume: 1
   playerSpawnSound: {fileID: 8300000, guid: 03b73a276c3578c4197cd9eb72b1f147, type: 3}
-  playerSpawnVolume: 1
+  playerSpawnVolume: 0.7
   playerExplodeSounds:
   - {fileID: 8300000, guid: 06708a048f1af8245b4bba71ab92ca40, type: 3}
   - {fileID: 8300000, guid: bb13edde171bd9e459a1eb193ab26f43, type: 3}
