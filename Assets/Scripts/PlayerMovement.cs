@@ -68,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
         if (context.performed && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            GetComponent<PlayerAudioController>().PlayJumpSound();
         }
 
         if (context.canceled && rb.velocity.y > 0f)

@@ -31,6 +31,11 @@ public class PlayerAudioController : MonoBehaviour
         audioSource.PlayOneShot(playerSpawnSound, playerSpawnVolume);
     }
 
+    public void PlayJumpSound()
+    {
+        audioSource.PlayOneShot(playerJumpSound, playerJumpVolume);
+    }
+
     public void ShoutPlayerName()
     {
         audioSource.PlayOneShot(playerNameShouting, playerNameShoutingVolume);

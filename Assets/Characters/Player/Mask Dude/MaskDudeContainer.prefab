@@ -397,8 +397,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bb13edde171bd9e459a1eb193ab26f43, type: 3}
   - {fileID: 8300000, guid: cff375923036ca745873dce3094b81f9, type: 3}
   playerExplodeVolume: 1
-  playerJumpSound: {fileID: 0}
-  playerJumpVolume: 1
+  playerJumpSound: {fileID: 8300000, guid: 5959d51e417087f499770d059b234805, type: 3}
+  playerJumpVolume: 0.7
 --- !u!61 &885678362616188605
 BoxCollider2D:
   m_ObjectHideFlags: 0
