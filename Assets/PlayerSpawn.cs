@@ -16,6 +16,7 @@ public class PlayerSpawn : MonoBehaviour
         gameObject.transform.position = GetSpawnLocation();
 
         animator.Play("Player_Appearing");
+        GetComponent<PlayerAudioController>().PlaySpawnSound();
     }
 
     // Update is called once per frame

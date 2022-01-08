@@ -146,13 +146,13 @@ GameObject:
   - component: {fileID: 3121489022172630858}
   - component: {fileID: 3121489022172630859}
   - component: {fileID: 8202444923333434786}
+  - component: {fileID: 3412624389656753132}
   - component: {fileID: 3121489022172630868}
   - component: {fileID: 3121489022172630857}
   - component: {fileID: 6283651774843002970}
   - component: {fileID: 2077728900385207203}
   - component: {fileID: 1687679098004997491}
   - component: {fileID: 1274387829774699731}
-  - component: {fileID: 3412624389656753132}
   m_Layer: 0
   m_Name: VirtualGuy
   m_TagString: Player
@@ -408,6 +408,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3412624389656753132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3121489022172630871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38c4e381e18de1f40900830b5ccbdd19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpawnSound: {fileID: 8300000, guid: 03b73a276c3578c4197cd9eb72b1f147, type: 3}
+  playerSpawnVolume: 1
+  playerExplodeSounds:
+  - {fileID: 8300000, guid: 06708a048f1af8245b4bba71ab92ca40, type: 3}
+  - {fileID: 8300000, guid: bb13edde171bd9e459a1eb193ab26f43, type: 3}
+  - {fileID: 8300000, guid: cff375923036ca745873dce3094b81f9, type: 3}
+  playerExplodeVolume: 1
+  playerJumpSound: {fileID: 0}
+  playerJumpVolume: 1
 --- !u!61 &3121489022172630868
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -451,8 +472,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  sprite: {fileID: 4792868853203460413}
-  animator: {fileID: 4403298367714476673}
   speed: 8
   jumpingPower: 16
   groundDetectionDistance: 0.5
@@ -487,7 +506,6 @@ MonoBehaviour:
   - {fileID: 5034550193944244155, guid: 9a16caa0bd7ac184fbd961c56a941b7c, type: 3}
   - {fileID: 9168333559791180078, guid: 181cf363c9a9b8049bede60e75470fba, type: 3}
   - {fileID: 3897585681054419630, guid: bfe43afe369712f41899ff7535db0b4d, type: 3}
-  playerRenderer: {fileID: 4792868853203460413}
   respawnDelayInSeconds: 1.5
 --- !u!114 &1687679098004997491
 MonoBehaviour:
@@ -517,25 +535,6 @@ MonoBehaviour:
   image: {fileID: -6367560908665664636, guid: 40de9a8703e2e5a47882b0b86451c741, type: 3}
   points: 0
   deaths: 0
---- !u!114 &3412624389656753132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3121489022172630871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38c4e381e18de1f40900830b5ccbdd19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerExplodeSounds:
-  - {fileID: 8300000, guid: 06708a048f1af8245b4bba71ab92ca40, type: 3}
-  - {fileID: 8300000, guid: bb13edde171bd9e459a1eb193ab26f43, type: 3}
-  - {fileID: 8300000, guid: cff375923036ca745873dce3094b81f9, type: 3}
-  playerExplodeVolume: 1
-  playerJumpSound: {fileID: 0}
-  playerJumpVolume: 1
 --- !u!1 &3121489022786430868
 GameObject:
   m_ObjectHideFlags: 0

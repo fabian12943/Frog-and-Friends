@@ -23,6 +23,7 @@ public class PlayerExplode : MonoBehaviour
             GetComponent<PlayerStats>().deaths += 1;
 
             GetComponent<PlayerAudioController>().PlayExplodeSound();
+            GameObject.Find("Announcer").GetComponent<AnnouncerController>().CommentOnPlayerDeath();
 
             Instantiate(blood, transform.position, Quaternion.identity);
             foreach(GameObject bodyPart in bodyParts) 
@@ -48,5 +49,6 @@ public class PlayerExplode : MonoBehaviour
         gameObject.GetComponent<BoxCollider2D>().enabled = true;
 
         playerAnimator.Play("Player_Appearing");
+        GetComponent<PlayerAudioController>().PlaySpawnSound();
     }
 }

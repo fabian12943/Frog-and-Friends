@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAudioController : MonoBehaviour
-{   
+{   [Header("Player Spawn")]
+    [SerializeField] AudioClip playerSpawnSound;
+    [SerializeField] float playerSpawnVolume = 1;
     [Header("Player Explode")]
     [SerializeField] AudioClip[] playerExplodeSounds;
     [SerializeField] float playerExplodeVolume = 1;
@@ -19,17 +21,17 @@ public class PlayerAudioController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlaySpawnSound()
     {
-        
+        audioSource.volume = playerSpawnVolume;
+        audioSource.clip = playerSpawnSound;
+        audioSource.Play();
     }
 
     public void PlayExplodeSound()
     {   
         audioSource.volume = playerExplodeVolume;
-        audioSource.clip = playerExplodeSounds[Random.Range(0, playerExplodeSounds.Length)];;
+        audioSource.clip = playerExplodeSounds[Random.Range(0, playerExplodeSounds.Length)];
         audioSource.Play();
     }
-
 }
