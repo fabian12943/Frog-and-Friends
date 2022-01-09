@@ -31,7 +31,7 @@ public class FillInLeaderboardRow : MonoBehaviour
         }
         else
         {
-            playerName.text = player.GetComponent<PlayerStats>().name;
+            playerName.text = player.GetComponent<PlayerStats>().playerName;
             pointsCount.text = "Points: " + player.GetComponent<PlayerStats>().points;
             deathCount.text = "Deaths: " + player.GetComponent<PlayerStats>().deaths;
             playerImage.sprite = player.GetComponent<PlayerStats>().image;
