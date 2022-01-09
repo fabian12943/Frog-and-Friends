@@ -430,6 +430,10 @@ MonoBehaviour:
   playerExplodeVolume: 1
   playerJumpSound: {fileID: 8300000, guid: 5959d51e417087f499770d059b234805, type: 3}
   playerJumpVolume: 0.7
+  itemCollectVolume: 1
+  appleCollectSound: {fileID: 8300000, guid: 1cbe17494b515b240bc9d0d1ea72d9a2, type: 3}
+  cherryCollectSound: {fileID: 8300000, guid: bd561cda82bfd854692024a75d38f4eb, type: 3}
+  pineappleCollectSound: {fileID: 8300000, guid: 31cfda8347bc1cb41b8b64efc077faab, type: 3}
 --- !u!61 &3121489022172630868
 BoxCollider2D:
   m_ObjectHideFlags: 0

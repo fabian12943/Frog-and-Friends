@@ -17,18 +17,21 @@ public class ItemCollector : MonoBehaviour
             {
                 points++;
                 GameObject.Find("Announcer").GetComponent<AnnouncerController>().CommentOnItemPickup("apple");
+                GetComponent<PlayerAudioController>().PlayCollectSound("apple");
             }
 
             if (collision.name.Contains("Cherry"))
             {
                 points = points + 2;
                 GameObject.Find("Announcer").GetComponent<AnnouncerController>().CommentOnItemPickup("cherry");
+                GetComponent<PlayerAudioController>().PlayCollectSound("cherry");
             }
 
             if (collision.name.Contains("Pineapple"))
             {
                 points += 5;
                 GameObject.Find("Announcer").GetComponent<AnnouncerController>().CommentOnItemPickup("pineapple");
+                GetComponent<PlayerAudioController>().PlayCollectSound("pineapple");
             }
             GetComponent<PlayerStats>().points = points;
             pointsText.text = "Points: " + points;

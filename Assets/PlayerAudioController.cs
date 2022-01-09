@@ -16,6 +16,11 @@ public class PlayerAudioController : MonoBehaviour
     [Header("Player Jump")]
     [SerializeField] AudioClip playerJumpSound;
     [SerializeField] float playerJumpVolume = 1;
+    [Header("Player Collect")]
+    [SerializeField] float itemCollectVolume = 1;
+    [SerializeField] AudioClip appleCollectSound;
+    [SerializeField] AudioClip cherryCollectSound;
+    [SerializeField] AudioClip pineappleCollectSound;
 
     private AudioSource audioSource;
 
@@ -46,5 +51,23 @@ public class PlayerAudioController : MonoBehaviour
         audioSource.volume = playerExplodeVolume;
         audioSource.clip = playerExplodeSounds[Random.Range(0, playerExplodeSounds.Length)];
         audioSource.Play();
+    }
+
+    public void PlayCollectSound(string itemName)
+    {
+        audioSource.volume = itemCollectVolume;
+        switch (itemName)
+        {
+            case "apple":
+                audioSource.PlayOneShot(appleCollectSound, itemCollectVolume);
+                break;
+            case "cherry":
+                audioSource.PlayOneShot(cherryCollectSound, itemCollectVolume);
+                break;
+            case "pineapple":
+                audioSource.PlayOneShot(pineappleCollectSound, itemCollectVolume);
+                break;
+        }
+        
     }
 }
