@@ -13,14 +13,13 @@ public class PlayerSpawn : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
 
         spawnpoints = GameObject.FindGameObjectsWithTag("Spawnpoint");
-        gameObject.transform.position = GetSpawnLocation();
+        gameObject.transform.position = GetRandomSpawnLocation();
 
         animator.Play("Player_Appearing");
         GetComponent<PlayerAudioController>().PlaySpawnSound();
     }
 
-    // Update is called once per frame
-    public Vector3 GetSpawnLocation()
+    public Vector3 GetRandomSpawnLocation()
     {
         spawnpoints = GameObject.FindGameObjectsWithTag("Spawnpoint");
         spawnpoints = Shuffle(spawnpoints);
@@ -32,6 +31,24 @@ public class PlayerSpawn : MonoBehaviour
             }
         }
         return spawnpoints[0].transform.position;
+    }
+
+    public Vector3 GetNearestSpawnLocation()
+    {
+        spawnpoints = GameObject.FindGameObjectsWithTag("Spawnpoint");
+        GameObject closestSpawnpointSoFar = null;
+        float closestDistanceSoFar = float.MaxValue;
+        foreach (GameObject spawnpoint in spawnpoints)
+        {
+             Vector3 diff = spawnpoint.transform.position - gameObject.transform.position;
+             float curDistance = Mathf.Abs(diff.sqrMagnitude);
+            if (curDistance < closestDistanceSoFar )
+            {
+                closestSpawnpointSoFar = spawnpoint;
+                closestDistanceSoFar = curDistance;
+            }
+        }
+        return closestSpawnpointSoFar.transform.position;
     }
 
     public static GameObject[] Shuffle (GameObject[] aList) {
