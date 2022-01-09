@@ -40,9 +40,9 @@ GameObject:
   m_Component:
   - component: {fileID: 251001061511387420}
   - component: {fileID: 5608844406879456668}
-  - component: {fileID: 369046816155483807}
+  - component: {fileID: 1590021633787642477}
   m_Layer: 0
-  m_Name: HeadDetect
+  m_Name: SelfDeadDetect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.21478201}
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1534157, y: 0.3556541}
   m_EdgeRadius: 0
---- !u!114 &369046816155483807
+--- !u!114 &1590021633787642477
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,9 +97,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3577154979185504592}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ef76b729a057c440afd1818219cedad, type: 3}
+  m_Script: {fileID: 11500000, guid: 42817a9505a71334fa57bb02e104de58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood: {fileID: 3056356348797373729, guid: e65742678fff7ec44aa5cb2d22d24a9a, type: 3}
+  bodyParts:
+  - {fileID: 5249872231266072503, guid: 805b91883805b0e4d9b784c9118b07e8, type: 3}
+  - {fileID: 4076079025076184306, guid: 85ed17f5bc7d5cc42825f3d3ddbd1839, type: 3}
+  respawnEnabled: 1
+  respawnDelayInSeconds: 10
 --- !u!1 &6509221822901450667
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,12 +275,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 100
   mustPatrol: 0
-  rb: {fileID: -9217717149337738932}
   groundCheckPos: {fileID: 5602239447291829823}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  bodyCollider: {fileID: -788184507826211854}
 --- !u!1 &8047876698574643555
 GameObject:
   m_ObjectHideFlags: 0
