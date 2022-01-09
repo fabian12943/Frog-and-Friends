@@ -6,22 +6,23 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
-    private SpriteRenderer sprite;
-    private Animator animator;
-
-    private float horizontal;
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 30f;
     [SerializeField] private float groundDetectionDistance = 0.5f;
+
+    private SpriteRenderer sprite;
+    private Animator animator;
+    private BoxCollider2D coll;
+    private float horizontal;
 
     private enum MovementState { idle, running, jumping, falling, hit };
 
     void Start() {
         sprite = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponentInChildren<Animator>();
+        coll = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -79,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, groundDetectionDistance, groundLayer);
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, groundDetectionDistance, groundLayer);
     }
 
     public void Move(InputAction.CallbackContext context)

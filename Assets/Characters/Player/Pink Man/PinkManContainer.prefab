@@ -37,7 +37,6 @@ Transform:
   m_LocalPosition: {x: -4.755, y: 1.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2201880988621892038}
   - {fileID: 2940538212907814927}
   - {fileID: 3865318379079956877}
   m_Father: {fileID: 6950200869165495128}
@@ -336,7 +335,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2201880988041642246}
-  groundCheck: {fileID: 2201880988621892038}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -402,36 +400,6 @@ MonoBehaviour:
   image: {fileID: -6367560908665664636, guid: d348dff3819df794186a80cb95777629, type: 3}
   points: 0
   deaths: 0
---- !u!1 &2201880988621892057
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2201880988621892038}
-  m_Layer: 0
-  m_Name: Ground Check
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2201880988621892038
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2201880988621892057}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2201880988041642264}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6155192986942891361
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +430,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2201880988041642264}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6895924050799762782
 SpriteRenderer:
@@ -693,7 +661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7311026555894515244, guid: 39293f5e0a713474e9d28257c9c26fa4, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7311026555894515244, guid: 39293f5e0a713474e9d28257c9c26fa4, type: 3}
       propertyPath: m_AnchorMax.x
