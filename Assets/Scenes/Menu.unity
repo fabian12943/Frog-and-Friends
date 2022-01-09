@@ -586,6 +586,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2143034409}
+        m_TargetAssemblyTypeName: UISoundsController, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &276479887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,6 +1081,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2143034409}
+        m_TargetAssemblyTypeName: UISoundsController, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &352070446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1259,6 +1283,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2138400515}
         m_TargetAssemblyTypeName: MenuButtonFunctions, Assembly-CSharp
         m_MethodName: BackToLevelSelection
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2143034409}
+        m_TargetAssemblyTypeName: UISoundsController, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1788,6 +1824,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2143034409}
+        m_TargetAssemblyTypeName: UISoundsController, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &539822365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2205,6 +2253,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2143034409}
+        m_TargetAssemblyTypeName: UISoundsController, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &577068370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2367,6 +2427,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2138400515}
         m_TargetAssemblyTypeName: MenuButtonFunctions, Assembly-CSharp
         m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2143034409}
+        m_TargetAssemblyTypeName: UISoundsController, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36792,6 +36864,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2143034409}
+        m_TargetAssemblyTypeName: UISoundsController, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &866287446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37153,6 +37237,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2143034409}
+        m_TargetAssemblyTypeName: UISoundsController, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &898748116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37308,6 +37404,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2138400515}
         m_TargetAssemblyTypeName: MenuButtonFunctions, Assembly-CSharp
         m_MethodName: BackToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2143034409}
+        m_TargetAssemblyTypeName: UISoundsController, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -38348,6 +38456,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2143034409}
+        m_TargetAssemblyTypeName: UISoundsController, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1394988307
 GameObject:
   m_ObjectHideFlags: 0
@@ -38805,6 +38925,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2143034409}
+        m_TargetAssemblyTypeName: UISoundsController, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -39411,6 +39543,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2143034409}
+        m_TargetAssemblyTypeName: UISoundsController, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1742409818
 GameObject:
   m_ObjectHideFlags: 0
@@ -39538,6 +39682,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2143034409}
+        m_TargetAssemblyTypeName: UISoundsController, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -39696,6 +39852,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1802060946}
   - component: {fileID: 1802060947}
+  - component: {fileID: 1802060949}
   - component: {fileID: 1802060948}
   m_Layer: 5
   m_Name: Slider Volume
@@ -39803,6 +39960,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeSlider: {fileID: 1802060947}
+--- !u!114 &1802060949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802060945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2143034409}
+          m_TargetAssemblyTypeName: UISoundsController, Assembly-CSharp
+          m_MethodName: PlayButtonClickSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1827001626
 GameObject:
   m_ObjectHideFlags: 0
@@ -41034,6 +41220,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a8b828f56fcf34b91b8daae61059fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2143034409 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8629941150632375352, guid: 1b2129bb581ff5841ae93bf8670aa3b6, type: 3}
+  m_PrefabInstance: {fileID: 8629941150235224081}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4128ea2950f797d47a5f5c19a74cd47a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8463980499727766304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41091,3 +41288,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9bc73f9d58571749b08efb977dbacc5, type: 3}
+--- !u!1001 &8629941150235224081
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8629941150632375353, guid: 1b2129bb581ff5841ae93bf8670aa3b6, type: 3}
+      propertyPath: m_Name
+      value: UI Sounds
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629941150632375354, guid: 1b2129bb581ff5841ae93bf8670aa3b6, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629941150632375354, guid: 1b2129bb581ff5841ae93bf8670aa3b6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.466733
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629941150632375354, guid: 1b2129bb581ff5841ae93bf8670aa3b6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.229882
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629941150632375354, guid: 1b2129bb581ff5841ae93bf8670aa3b6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -29.420181
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629941150632375354, guid: 1b2129bb581ff5841ae93bf8670aa3b6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629941150632375354, guid: 1b2129bb581ff5841ae93bf8670aa3b6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629941150632375354, guid: 1b2129bb581ff5841ae93bf8670aa3b6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629941150632375354, guid: 1b2129bb581ff5841ae93bf8670aa3b6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629941150632375354, guid: 1b2129bb581ff5841ae93bf8670aa3b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629941150632375354, guid: 1b2129bb581ff5841ae93bf8670aa3b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629941150632375354, guid: 1b2129bb581ff5841ae93bf8670aa3b6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1b2129bb581ff5841ae93bf8670aa3b6, type: 3}
