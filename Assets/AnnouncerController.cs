@@ -126,7 +126,7 @@ public class AnnouncerController : MonoBehaviour
     public void CommentOnMatchResults()
     {   
         audioSource.clip = resultsComments[(Random.Range(0, resultsComments.Length))];
-        audioSource.PlayDelayed(1);
+        audioSource.PlayDelayed(8);
     }
 
     private AudioClip[] Shuffle(AudioClip[] clips)

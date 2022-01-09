@@ -9,6 +9,9 @@ public class ResultsMessageController : MonoBehaviour
     [SerializeField]
     private List<GameObject> leaderboardPlaces;
 
+    [SerializeField]
+    private AudioClip victorySound;
+
     private GameObject resultsMessage;
     private bool resultsCalculated = false;
 
@@ -28,6 +31,8 @@ public class ResultsMessageController : MonoBehaviour
             resultsMessage.SetActive(true);
             CalculatePlayerScores();
             resultsCalculated = true;
+
+            GameObject.Find("Background Music").GetComponent<BackgroundAudioController>().PlayAudioClip(victorySound);
         }
     }
 

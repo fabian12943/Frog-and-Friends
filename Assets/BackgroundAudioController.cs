@@ -41,4 +41,10 @@ public class BackgroundAudioController : MonoBehaviour
         }
     }
 
+    public void PlayAudioClip(AudioClip audioClip)
+    {
+        audioSource.clip = audioClip;
+        audioSource.Play();
+    }
+
 }
