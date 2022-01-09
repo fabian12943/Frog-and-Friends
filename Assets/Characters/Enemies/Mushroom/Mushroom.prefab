@@ -106,6 +106,7 @@ MonoBehaviour:
   - {fileID: 4076079025076184306, guid: 85ed17f5bc7d5cc42825f3d3ddbd1839, type: 3}
   respawnEnabled: 1
   respawnDelayInSeconds: 10
+  enemyName: mushroom
 --- !u!1 &6509221822901450667
 GameObject:
   m_ObjectHideFlags: 0

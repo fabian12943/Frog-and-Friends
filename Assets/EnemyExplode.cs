@@ -8,6 +8,7 @@ public class EnemyExplode : MonoBehaviour
     public GameObject[] bodyParts;
     public bool respawnEnabled = true;
     public float respawnDelayInSeconds = 4.0f;
+    public string enemyName;
 
     private GameObject enemy;
 
@@ -21,6 +22,7 @@ public class EnemyExplode : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             other.gameObject.GetComponent<PlayerAudioController>().PlayExplodeSound();
+            GameObject.Find("Announcer").GetComponent<AnnouncerController>().CommentOnEnemyDeath(enemyName);
 
             Instantiate(blood, transform.position, Quaternion.identity);
             foreach(GameObject bodyPart in bodyParts) 

@@ -12,6 +12,8 @@ public class AnnouncerController : MonoBehaviour
     [SerializeField] private AudioClip[] cherryPickupComments;
     [SerializeField] private AudioClip[] pineapplePickupComments;
     [SerializeField] private AudioClip[] generalPickupComments;
+    [SerializeField] private AudioClip[] mushroomKillComments;
+    [SerializeField] private AudioClip[] generalKillComments;
 
     private AudioSource audioSource;
 
@@ -20,6 +22,8 @@ public class AnnouncerController : MonoBehaviour
     private int cherryPickupCommentsCounter = 0;
     private int pineapplePickupCommentsCounter = 0;
     private int generalPickupCommentsCounter = 0;
+    private int mushroomKillCommentsCounter = 0;
+    private int generalKillCommentsCounter = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +34,8 @@ public class AnnouncerController : MonoBehaviour
         cherryPickupComments = Shuffle(cherryPickupComments);
         pineapplePickupComments = Shuffle(pineapplePickupComments);
         generalPickupComments = Shuffle(generalPickupComments);
+        mushroomKillComments = Shuffle(mushroomKillComments);
+        generalKillComments = Shuffle(generalKillComments);
         
         audioSource = GetComponent<AudioSource>();
         AnnounceSpawn();
@@ -62,10 +68,11 @@ public class AnnouncerController : MonoBehaviour
 
     public void CommentOnItemPickup(string itemName)
     {
-        if (!audioSource.isPlaying)
+        int randomNumber1 = Random.Range(0, 2);
+        if (randomNumber1 == 0 && !audioSource.isPlaying) // Only play comment half of the time
         {
-            int randomNumber = Random.Range(0, 3);
-            if (randomNumber == 2)
+            int randomNumber2 = Random.Range(0, 3);
+            if (randomNumber2 == 2)
             {
                 itemName = "general";
             }
@@ -87,6 +94,32 @@ public class AnnouncerController : MonoBehaviour
                 case "general":
                     audioSource.clip = generalPickupComments[generalPickupCommentsCounter];
                     generalPickupCommentsCounter = generalPickupCommentsCounter == generalPickupComments.Length-1 ? 0 : generalPickupCommentsCounter += 1;
+                    break;
+            }
+
+            audioSource.Play();
+        }
+    }
+
+    public void CommentOnEnemyDeath(string enemyName)
+    {
+        if (!audioSource.isPlaying)
+        {   
+            int randomNumber2 = Random.Range(0, 3);
+            if (randomNumber2 == 2)
+            {
+                enemyName = "general";
+            }
+
+            switch (enemyName)
+            {
+                case "mushroom": 
+                    audioSource.clip = mushroomKillComments[mushroomKillCommentsCounter];
+                    mushroomKillCommentsCounter = mushroomKillCommentsCounter == mushroomKillComments.Length-1 ? 0 : mushroomKillCommentsCounter += 1;
+                    break;
+                case "general":
+                    audioSource.clip = generalKillComments[generalKillCommentsCounter];
+                    generalKillCommentsCounter = generalKillCommentsCounter == generalKillComments.Length-1 ? 0 : generalKillCommentsCounter += 1;
                     break;
             }
 
