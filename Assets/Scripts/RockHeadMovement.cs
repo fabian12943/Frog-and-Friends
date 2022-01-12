@@ -11,7 +11,7 @@ public class RockHeadMovement : MonoBehaviour
     private float startPosY;
     private float speed = 0f;
 
-    [SerializeField] private float acceleration = 0.1f;
+    [SerializeField] private float acceleration;
     private Animator animator;
 
     private enum MovementState { blink, up, down, left, rigth };
@@ -24,7 +24,7 @@ public class RockHeadMovement : MonoBehaviour
         startPosX = transform.position.x;
         startPosY = transform.position.y;
     }
-    private void Update()
+    private void FixedUpdate()
     {
         if (Vector2.Distance(waypoints[currentWaypointIndex].transform.position, transform.position) < .1f)
         {
