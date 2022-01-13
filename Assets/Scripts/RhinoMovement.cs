@@ -4,79 +4,68 @@ using UnityEngine;
 
 public class RhinoMovement : MonoBehaviour
 {   
-    public float walkSpeed = 100;
+    public float mMovementSpeed = 5.0f;
+    public bool bIsGoingRight = true;
+    public float mRaycastingDistance = 1.5f;
 
-    [HideInInspector]
-    public bool mustPatrol;
-    private bool mustTurn;
-
-    public Rigidbody2D rb;
-    public Transform groundCheckPos;
-    public LayerMask groundLayer;
-    public Collider2D wallCollider;
-    public Collider2D playerDetectionCollider;
+    private SpriteRenderer _mSpriteRenderer;
     private Animator animator;
-    private enum MovementState { idle, running };
-    MovementState state;
+
+    public bool mustPatrol = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        mustPatrol = false;
-        animator = GetComponent<Animator>();
+        _mSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        animator = gameObject.GetComponent<Animator>();
+        _mSpriteRenderer.flipX = bIsGoingRight;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (mustPatrol)
         {
-            Chasing();
-            state = MovementState.running;
+            animator.SetInteger("state", 1);
+            // if the ennemy is going right, get the vector pointing to its right
+            Vector3 directionTranslation = (bIsGoingRight) ? transform.right : -transform.right; 
+            directionTranslation *= Time.deltaTime * mMovementSpeed;
+
+            transform.Translate(directionTranslation);
+
+            CheckForWalls();
         }
-        else 
+        else
         {
-            Chasing();
-            state = MovementState.running;
+            animator.SetInteger("state", 0);
         }
-        animator.SetInteger("state", (int)state);
     }
 
-    private void FixedUpdate() {
-         mustTurn = !Physics2D.OverlapCircle(groundCheckPos.position, 0.1f, groundLayer);
-    }
-
-    void Patrol()
-    {   
-        if (mustTurn ||wallCollider.IsTouchingLayers(groundLayer))
-        {
-            Flip();
-        }
-
-        rb.velocity = new Vector2(walkSpeed * Time.fixedDeltaTime, rb.velocity.y);
-    }
-
-    void Chasing()
+    private void CheckForWalls()
     {
-        if (mustTurn)
-        {
-            Flip();
-        }
+        Vector3 raycastDirection = (bIsGoingRight) ? Vector3.right : Vector3.left;
 
-        if (wallCollider.IsTouchingLayers(groundLayer))
-        {
-            animator.SetTrigger("hit_wall");
-            Flip();
-        }
+        // Raycasting takes as parameters a Vector3 which is the point of origin, another Vector3 which gives the direction, and finally a float for the maximum distance of the raycast
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + raycastDirection * mRaycastingDistance - new Vector3(0f, 0.25f, 0f), raycastDirection, 0.075f);
 
-        rb.velocity = new Vector2(walkSpeed * Time.fixedDeltaTime, rb.velocity.y);
+        // if we hit something, check its tag and act accordingly
+        if (hit.collider != null)
+        {
+            if (hit.transform.tag == "Terrain")
+            {
+                mustPatrol = false;
+                animator.Play("Rhino_Hit_Wall");
+                StartCoroutine(Flip());
+            }
+        }
     }
 
-    void Flip()
+    IEnumerator Flip()
     {
-        mustPatrol = false;
-        transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-        walkSpeed *= -1;
+        yield return new WaitForSeconds(0.75f);
+        bIsGoingRight = !bIsGoingRight;
+        _mSpriteRenderer.flipX = bIsGoingRight;
         mustPatrol = true;
     }
+
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8054236795209770088
+--- !u!1 &4693943813049998402
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,28 +8,55 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3707751140971189004}
+  - component: {fileID: 2116167128769586180}
+  - component: {fileID: 5406492683507856285}
   m_Layer: 0
-  m_Name: GroundCheckPosition
-  m_TagString: Untagged
+  m_Name: PlayerDeadDetect
+  m_TagString: Deadly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3707751140971189004
+--- !u!4 &2116167128769586180
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8054236795209770088}
+  m_GameObject: {fileID: 4693943813049998402}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.71, y: -1.05, z: -0.30030882}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.0296, y: -0.3608, z: 0}
+  m_LocalScale: {x: 0.79999995, y: 0.79999995, z: 0.79999995}
   m_Children: []
   m_Father: {fileID: 8632846377996471375}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &5406492683507856285
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4693943813049998402}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.004696846, y: 0.207636}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.6556373, y: 2.114579}
+  m_EdgeRadius: 0
 --- !u!1 &8924010589749507025
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +89,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3707751140971189004}
+  - {fileID: 2116167128769586180}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -108,7 +135,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -1075854790282143660, guid: e3531be27cb827743bac8ea66dae5bfd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 3.25, y: 2.125}
@@ -151,7 +178,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.015995145, y: -0.114254594}
+  m_Offset: {x: 0.008850098, y: -0.114254594}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -162,7 +189,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.2659404, y: 1.6343853}
+  m_Size: {x: 2.9347, y: 1.6343853}
   m_EdgeRadius: 0
 --- !u!95 &3321914065362914205
 Animator:
@@ -195,12 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50606875a4fc10b4581d3f42eaf80add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 100
-  mustPatrol: 0
-  rb: {fileID: -6421552587260764341}
-  groundCheckPos: {fileID: 3707751140971189004}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  wallCollider: {fileID: -4474955285481930925}
-  playerDetectionCollider: {fileID: 0}
+  mMovementSpeed: 5
+  bIsGoingRight: 0
+  mRaycastingDistance: 1.5
+  mustPatrol: 1
