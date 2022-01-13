@@ -23,9 +23,5 @@ public class PlayerManagerController : MonoBehaviour
             GetComponent<Timer>().StartTimer();
             matchRunning = true;
         }
-        else
-        {
-            inputManager.EnableJoining();
-        }
     }
 }
