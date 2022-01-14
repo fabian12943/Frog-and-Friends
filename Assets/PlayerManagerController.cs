@@ -20,7 +20,7 @@ public class PlayerManagerController : MonoBehaviour
         if (GameObject.FindGameObjectsWithTag("Player").Length == PlayerPrefs.GetInt("noOfPlayers", 1) && matchRunning == false)
         {
             inputManager.DisableJoining();
-            GetComponent<Timer>().StartTimer();
+            GameObject.Find("Timer").GetComponent<Timer>().StartTimer();
             matchRunning = true;
         }
     }

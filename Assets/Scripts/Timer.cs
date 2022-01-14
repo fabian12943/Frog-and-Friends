@@ -10,10 +10,11 @@ public class Timer : MonoBehaviour
     public static float timeRemaining;
     private bool timerIsRunning = false;
 
-    [SerializeField] private Text timeText;
+    private Text timeText;
 
     private void Start() {
         timeRemaining = PlayerPrefs.GetInt("matchDuration", 5) * 30.0f;
+        timeText = GetComponent<Text>();
     }
 
     private void Update()
