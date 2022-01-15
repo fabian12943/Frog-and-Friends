@@ -199,6 +199,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 929810e07bad10142ad38f3053a2e0cd, type: 3}
   - {fileID: 8300000, guid: 83218c4f123862e4db22a8e24d18c5ee, type: 3}
   - {fileID: 8300000, guid: 4330529ddcc3a6b40886769fb9fef3d9, type: 3}
+  - {fileID: 8300000, guid: 7f0846fcb9e53d341af79adefbea7ad0, type: 3}
   generalPickupComments:
   - {fileID: 8300000, guid: f4153209b5642eb428242aabd49ef371, type: 3}
   - {fileID: 8300000, guid: c7d3523810a935743be7536a6f142085, type: 3}
@@ -218,3 +219,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4c33a2a8b0afe144bb332560f240af18, type: 3}
   - {fileID: 8300000, guid: 4bd7b5fdf87b7134d94220ce7be2a566, type: 3}
   - {fileID: 8300000, guid: b079423df72c189499f1e3908c23cccc, type: 3}
+  - {fileID: 8300000, guid: 1c0d3d10d0459274dad09050560385ea, type: 3}
+  - {fileID: 8300000, guid: 19429a2cfca0ce742926f432793db36f, type: 3}
