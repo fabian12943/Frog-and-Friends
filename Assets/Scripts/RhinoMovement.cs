@@ -46,7 +46,7 @@ public class RhinoMovement : MonoBehaviour
         Vector3 raycastDirection = (bIsGoingRight) ? Vector3.right : Vector3.left;
 
         // Raycasting takes as parameters a Vector3 which is the point of origin, another Vector3 which gives the direction, and finally a float for the maximum distance of the raycast
-        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position + raycastDirection * mRaycastingDistance - new Vector3(0f, 0.25f, 0f), raycastDirection, 0.075f);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position + raycastDirection * mRaycastingDistance - new Vector3(0f, 0.25f, 0f), raycastDirection, 0.15f);
 
         // if we hit something, check its tag and act accordingly
         if (hits.Length != 0)
