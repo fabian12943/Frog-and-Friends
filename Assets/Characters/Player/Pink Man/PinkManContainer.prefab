@@ -644,12 +644,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 2201880988041642264}
     m_Modifications:
     - target: {fileID: 2203496667001619428, guid: 39293f5e0a713474e9d28257c9c26fa4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 332.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203496667001619428, guid: 39293f5e0a713474e9d28257c9c26fa4, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4121399569646243511, guid: 39293f5e0a713474e9d28257c9c26fa4, type: 3}
       propertyPath: m_Name
       value: Player Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5769741647694856534, guid: 39293f5e0a713474e9d28257c9c26fa4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 257.14
       objectReference: {fileID: 0}
     - target: {fileID: 5822727151629811232, guid: 39293f5e0a713474e9d28257c9c26fa4, type: 3}
       propertyPath: m_FontData.m_MinSize
