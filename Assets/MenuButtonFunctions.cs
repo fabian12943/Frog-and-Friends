@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuButtonFunctions : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class MenuButtonFunctions : MonoBehaviour
     GameObject settingsButtonGroup;
     GameObject levelButtonGroup;
     GameObject numberOfPlayersSelection;
+
+    [SerializeField]
+    Button primaryObjectMainMenu, primaryObjectLevelGroup, primaryObjectPlayerSelectionGroup;
+
+    [SerializeField]
+    Slider primaryObjectSettingsGroup;
 
     int selectedLevel = 0;
 
@@ -38,18 +45,21 @@ public class MenuButtonFunctions : MonoBehaviour
 
     public void OpenSettings()
     {
+        primaryObjectSettingsGroup.Select();
         mainButtonGroup.SetActive(false);
         settingsButtonGroup.SetActive(true);
     }
 
     public void OpenLevelSelection()
     {
+        primaryObjectLevelGroup.Select();
         mainButtonGroup.SetActive(false);
         levelButtonGroup.SetActive(true);
     }
 
     public void BackToMainMenu()
     {
+        primaryObjectMainMenu.Select();
         mainButtonGroup.SetActive(true);
         settingsButtonGroup.SetActive(false);
         levelButtonGroup.SetActive(false);
@@ -58,6 +68,7 @@ public class MenuButtonFunctions : MonoBehaviour
 
     public void BackToLevelSelection()
     {
+        primaryObjectLevelGroup.Select();
         mainButtonGroup.SetActive(false);
         settingsButtonGroup.SetActive(false);
         levelButtonGroup.SetActive(true);
@@ -70,6 +81,7 @@ public class MenuButtonFunctions : MonoBehaviour
         selectedLevel = level;
         levelButtonGroup.SetActive(false);
         numberOfPlayersSelection.SetActive(true);
+        primaryObjectPlayerSelectionGroup.Select();
     }
 
     public void SelectNoOfPlayers(int noOfPlayers)
