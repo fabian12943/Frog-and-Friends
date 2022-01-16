@@ -87,4 +87,13 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = context.ReadValue<Vector2>().x;
     }
+
+    public void TriggerPauseMenu(InputAction.CallbackContext context)
+    {
+        if (context.performed) 
+        {
+            GameObject.Find("Pause").GetComponent<PauseMenuController>().PauseOrUnpauseGame();
+            GetComponent<PlayerInput>().defaultActionMap = "UI";
+        }
+    }
 }

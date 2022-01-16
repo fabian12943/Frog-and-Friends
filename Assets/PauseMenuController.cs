@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PauseMenuController : MonoBehaviour
 {
     private bool isGamePaused = false;
     private GameObject pauseMenu;
+
+    [SerializeField] Button primaryObjectPauseMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +43,7 @@ public class PauseMenuController : MonoBehaviour
     private void PauseGame()
     {
         pauseMenu.SetActive(true);
+        primaryObjectPauseMenu.Select();
         Time.timeScale = 0;
         isGamePaused = true;
     }
