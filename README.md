@@ -34,7 +34,7 @@ Whether you prefer a keyboard, PS4, PS5, or XBox gamepad, the game can be played
 any current gamepad. Navigating the menus is equally possible with a gamepad.
 
 ## Installation
-The game can be downloaded under "Releases" as a Windows or macOS application and can be launched with a simple double-click.
+The game can be downloaded in the section [Releases](https://github.com/fabian12943/Frog-and-Friends/releases) as a Windows or macOS application and can be launched with a simple double-click.
 
 Alternatively, the latest version of the game can be played online via the following link: https://fabian12943.itch.io/frog-friends
 
