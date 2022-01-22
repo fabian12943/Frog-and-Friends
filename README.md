@@ -39,4 +39,4 @@ The game can be downloaded in the section [Releases](https://github.com/fabian12
 Alternatively, the latest version of the game can be played online via the following link: https://fabian12943.itch.io/frog-friends
 
 ## Documentation
-If you want to find out more about the development of the game, you can have a look at the project documentation. However, it is only available in German.
+If you want to find out more about the development of the game, you can have a look at the [project documentation](Projekt-Dokumentation.pdf). However, it is only available in German.
