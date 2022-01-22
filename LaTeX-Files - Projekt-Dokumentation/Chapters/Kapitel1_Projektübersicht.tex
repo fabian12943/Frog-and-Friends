@@ -1,0 +1,124 @@
+\setlength{\parindent}{0em}
+
+\chapter{Projektübersicht}
+
+\label{Chapter1}
+
+%----------------------------------------------------------------------------------------
+%	KONZEPT
+%----------------------------------------------------------------------------------------
+
+\section{Konzept}
+
+%-----------------------------------
+%	PROJEKTIDEE
+%-----------------------------------
+\subsection{Projektidee}
+
+Bei der Ideenfindung zu unserem Projekt haben wir uns schnell darauf geeinigt einen 2D-Platformer in Unity zu erstellen, welcher sowohl alleine gespielt werden kann, als auch in einem kompetitiven lokalen Mehrspielermodus im Split-Screen mit drei weiteren Spielern. Steuerbar sollten die Charaktere der Spieler sowohl mit Tastatur als auch mit Gamepad sein. Die Idee für das Ziel des Spiels war es anfangs noch ein Level in möglichst kurzer Zeit abzuschließen. Im Mehrspielermodus wären also alle Spieler am selben Punkt gespawnt und es hätte der Spieler gewonnen, der als erstes das Ziel erreicht. Diese anfängliche Idee wurde von uns allerdings verworfen, da sich die Spieler (besonders im 3- oder 4-Spielermodus) nur gegenseitig behindern, wenn sie zur selben Zeit an der selben Stelle im Level das gleiche versuchen. Unsere neue Idee sah vor, einsammelbare Items mit unterschiedlichen Werten in der Spielwelt zu verteilen und das Ziel des Spiels darauf zu ändern, möglichst viele dieser Items in einer festlegbaren Rundenzeit zu sammeln. Der Spieler, der am Ende also die meisten Punkte eingesammelt hat, gewinnt das Spiel. Um den Spielern dies möglichst zu erschweren sollen sich in der Spielwelt diverse tödliche Gegner und Hindernisse befinden, die den Spieler im Falle seines Todes an den naheliegendsten Spawnpunkt versetzen, von welchem er fortfahren kann.\\
+
+Um das Spiel von anderen 2D-Jump-n-Run-Spielen abzuheben, entschieden wir uns dafür neben der fröhlichen, heiteren Aufmachung des Spiels mit einer für das Spielgenre unüblichen Brutalität einen kompletten Gegensatz einzubauen. Zusätzlich kam uns im Verlauf des Projekts noch die Idee einen Spielkommentator einzubauen, welcher den Spieler nicht leiden kann und jede seiner Taten mit einem spöttischen Spruch kommentiert. So soll das Spiel mit seiner grafischen und musikalischen Aufmachung zunächst an ein kindgerechtes, buntes Platformer-Spiel erinnern und sich dem Spieler das wahre Gesicht des Spiels erst während des eigentlichen Spielens offenbaren.
+
+%-----------------------------------
+%	ZEITPLAN
+%-----------------------------------
+\subsection{Zeitplan}
+
+Um das Spiel rechtzeitig zum Abgabetermin fertig zu bekommen und stets selbst ein Bild über den aktuellen Fortschritt zu haben, unterteilten wir das Projekt bereits relativ früh in drei Sprints und drei Meilensteine.\\
+
+Für die Sprints legten wir dann die jeweiligen zu bearbeitenden Aufgaben fest, wobei sich diese natürlich über den Verlauf des Projekts teils änderten und andere Aufgaben hinzukamen. Beispielsweise kam die Idee einen Spielkommentator zu implementieren erst gegen Ende des 1. Sprints auf und wurde dann dem 2. Sprint als neue Aufgabe hinzugefügt.\\
+
+In den drei Sprints arbeiteten wir jeweils auf den nächsten Meilenstein hin. Unser erster Meilenstein war es, bis Anfang Dezember 2021 einen ersten Spiel-Prototypen zu entwickeln der sich starten lässt und sich erste Konzepte ausprobieren lassen. Der erste Prototyp sollte dabei klar zeigen, in welche Richtung sich unser Spiel entwickelt. Bis zum zweiten Meilenstein Mitte Januar 2022, sollte die Entwicklung des Spiels abgeschlossen sein und höchstens nur noch kleine Verbesserungen und Bugfixes nötig sein. Der letzte Meilenstein ist die Projektabgabe am 9. Februar 2022. Zu diesem Datum sollten alle Verbesserungen abgeschlossen und keine Bugs mehr im Spiel vorhanden sein. Außerdem sollten auch alle anderen geforderten Projektdokumente abgabefertig sein.\\
+
+Abbildung~\ref{fig:timeline} zeigt den von uns festgelegten Zeitplan für das Projekt.\\
+
+\begin{figure}[th]
+\centering
+\includegraphics[width=120mm]{Figures/timeline.jpg}
+\decoRule
+\caption[Zeitachse des Projekts]{Zeitachse des Projekts}
+\label{fig:timeline}
+\end{figure}
+
+Nachfolgend sind stichpunktartig die konkreten Aufgaben der einzelnen Sprints beschrieben. Einige der Aufgaben wurden von uns in Unteraufgaben (Tasks) unterteilt. Diese werden hier aus Platzgründen aber nicht separat angegeben.
+
+\subsubsection*{Sprint 1}
+
+\begin{itemize}
+    \item Ideenfindung und erste Skizzen zum Leveldesign
+    \item Erzeugung einer Tilemap und Tile-Palette
+    \item Implementierung der Spieler-Animationen
+    \item Implementierung von Spieler-Physik und Bewegung
+    \item Implementierung des Spieler-Managers und dem lokalen Split-Screen-Modus
+    \item Unterstützung von Gamepads als weiteres Eingabegerät
+    \item Erstellung des ersten Test-Levels mit Terrain zum Testen der bereits implementierten Funktionen
+\end{itemize}
+
+\subsubsection*{Sprint 2}
+
+\begin{itemize}
+    \item Implementierung von Gegnern mit Logik und Animationen (Rhino, Mushroom, Plant)
+    \item Implementierung von Hindernissen und Fallen mit Logik und Animationen (Rock Head, Saw, Falling Platform, Moving Platform)
+    \item Hinzufügen einer grafischen Benutzeroberfläche (Hauptmenü, Pausenmenü, Anleitung, Matchresultat)
+    \item Implementierung von Fruit-Items, Zählerskript und Darstellung auf Bildschirm
+    \item Implementierung von Spawnpunkten und der Spawnlogik
+    \item Implementierung des Spielkommentators
+    \item Implementierung von Musik und Soundeffekten
+    \item Implementierung der Todesanimation mit eigenen Spritesheets
+    \item Fertigstellen des ersten Levels
+    
+\end{itemize}
+
+\subsubsection*{Sprint 3}
+
+\begin{itemize}
+    \item Anfertigung der Projekt-Dokumentation
+    \item Anfertigung einer Installations- und Spielanleitung
+    \item Weitere kleine Verbesserungen und Bugfixes
+    \item Erstellung von ausführbaren Builds für Windows, MacOS und WebGL
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	DETAILS
+%----------------------------------------------------------------------------------------
+
+\section{Details}
+
+%-----------------------------------
+%	ZIEL-PLATTFORM UND PUBLIKUM
+%-----------------------------------
+\subsection{Publikum und Ziel-Plattformen}
+
+\subsubsection*{Publikum}
+Auch wenn unser Spiel durch seine bunte und fröhliche Aufmachung und Musik zunächst den Eindruck eines kindergerechten 2D-Platformers vermitteln dürfte, ist es durch seine teils blutigen Animationen und den spöttischen Kommentator des Spielgeschehens kein Spiel für kleine Kinder. Die angestrebte Zielgruppe für das Spiel sind demnach vor allem Jugendliche und Erwachsene, die gerne Jump-n-Run-Spiele spielen und etwas Herausforderung suchen. Insbesondere ist das Spiel für diejenigen interessant, die sich gerne mit bis zu 3 weiteren Spielern lokal im Split-Screen miteinander messen möchten.
+
+\subsubsection*{Ziel-Plattformen}
+Das Spiel steht als eigenständige Applikation für Windows und MacOS zur Verfügung. Zusätzlich lässt sich das Spiel unter dem Link \url{https://fabian12943.itch.io/frog-friends} als WebGL-Browserspiel in allen modernen Webbrowsern spielen. Dies erweitert die möglichen Plattformen auf denen sich das Spiel spielen lässt auf praktisch jedes internetfähige Endgerät, welches über einen WebGL-fähigen Browser verfügt und mit welchem sich eine Tastatur oder ein Controller verbinden lässt. Erfolgreich testen konnten wir die WebGL-Fähigkeit unter Windows und MacOS mit den Browsern Firefox und Chrome, sowie auf einem Android-Smartphone mit dem Chrome-Browser. Da das Spiel kein bestimmtes Seitenverhältnis erzwingt, lässt es sich bildschirmfüllend, ohne schwarze Ränder an den Seiten, auf jedem Bildschirm optimal anzeigen. 
+
+%-----------------------------------
+%	FEATURES
+%-----------------------------------
+\subsection{Features}
+
+Das Spiel verfügt über einige interessante Features, welche im Folgenden jeweils kurz in einer Formulierung aufgeführt werden, wie sie sich auch auf einer Spieleverpackung wiederfinden könnten.
+
+\subsubsection*{Lokaler Splitscreen-Multiplayer für bis zu 4 Spieler}
+Das Spiel ermöglicht es bis zu vier Spielern gleichzeitig sich im Split-Screen Modus miteinander zu messen. Wer innerhalb der Spielrundenzeit mehr Items einsammelt und weniger oft stirbt gewinnt das Spiel.
+
+\subsubsection*{Tödliche Gegner \& tückische Fallen}
+Schießende Pflanzen, wütende Nashörner und giftige Pilze. Dazu noch rotierende Sägeblätter, herabfallende Plattformen und dich zertrümmernde Steine. Ohne das nötige Talent warten viele Tode und böse Kommentare. 
+
+\subsubsection*{Ein spöttischer Kommentator, dem du es nicht recht machen kannst}
+Ein Kommentator der dich und deine Spielweise nicht mag und es dich in jedem Satz wissen lässt, ganz egal ob du gerade gestorben bist, einen Punkt gemacht hast oder sogar gewonnen hast. Insgesamt verfügt das Spiel über 70 Sprüche, die mit Hilfe einer KI-Sprachsynthese-Webseite erstellt wurden.
+
+\subsubsection*{Blutige Gewalt}
+Egal ob Spielercharakter oder Gegner: Alles was stirbt zerschmettert in viele, blutige Teile. 
+
+\subsubsection*{Support für Tastatur und Gamepads}
+Egal ob mit Tastatur, PS4-, PS5-, oder XBox-Gamepad, das Spiel lässt sich neben der Tastatur mit praktisch jedem aktuellen Gamepad spielen. Auch die Navigation in den Menüs ist mit dem Gamepad möglich.
+
+\subsubsection*{Ein großes erstes Level}
+Das Spiel bietet bereits ein erstes Level, welches auch bei 4 Spielern noch groß genug ist und Herausforderungen an jeder Ecke bereit hält.
+
+\subsubsection*{Anpassungsmöglichkeiten}
+Wenn der Kommentator wieder zu gemein war, lässt sich der Sound im Hauptmenü ausschalten oder leiser drehen. Ebenfalls kann die Rundenlänge zwischen 30 Sekunden und 5 Minuten nach Belieben eingestellt werden. Die Einstellungen bleiben auch nach dem Beenden des Spiels erhalten.
