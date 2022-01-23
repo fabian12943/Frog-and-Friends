@@ -5,7 +5,7 @@
 - [What's Frog & Friends](#whats-frog--friends)
 - [Game Features](#game-features)
 - [Installation](#installation)
-- [Documentation](#documentation)
+- [Documentation](#documentation--manual)
 
 ## What's Frog & Friends?
 Frog & Friends is a slightly brutal 2D platformer with a commentator who doesn't like you and will comment on each of your actions with a mocking line.
@@ -38,5 +38,5 @@ The game can be downloaded in the section [Releases](https://github.com/fabian12
 
 Alternatively, the latest version of the game can be played online via the following link: https://fabian12943.itch.io/frog-friends
 
-## Documentation
-If you want to find out more about the development of the game, you can have a look at the [project documentation](Projekt-Dokumentation.pdf). However, it is only available in German.
+## Documentation & Manual
+If you want to find out more about the development of the game, you can have a look at the [project documentation](Projekt-Dokumentation.pdf). There is also a [game manual with installation instructions](Installations-%20und%20Spieleanleitung.pdf) available. However, both are only available in German.
