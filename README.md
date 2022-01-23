@@ -5,7 +5,7 @@
 - [What's Frog & Friends](#whats-frog--friends)
 - [Game Features](#game-features)
 - [Installation](#installation)
-- [Documentation](#documentation--manual)
+- [Documentation & Manual](#documentation--manual)
 
 ## What's Frog & Friends?
 Frog & Friends is a slightly brutal 2D platformer with a commentator who doesn't like you and will comment on each of your actions with a mocking line.
