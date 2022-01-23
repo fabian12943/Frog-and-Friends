@@ -1,0 +1,33 @@
+\setlength{\parindent}{0em}
+
+\chapter{Installationsanleitung}
+
+\label{Chapter1}
+
+\section{Windows}
+
+Einen der folgenden Assets von der Github-Seite des Projekts unter \url{https://github.com/fabian12943/Frog-and-Friends/releases} herunterladen und wie beschrieben ausführen:
+        \begin{enumerate}
+            \item \textbf{FrogAndFriends.exe}:\\
+            Bei dieser Anwendung handelt es sich um ein selbstextrahierendes Zip-Archiv (SFX-Archiv), welches den Inhalt in ein temporäres Verzeichnis entpackt und das Spiel startet. Bei Beenden des Spiels wird das temporäre Verzeichnis wieder gelöscht. Die Anwendung kann mit einem einfachen Doppelklick gestartet werden, erfordert aber ein installiertes Packprogramm wie WinRAR oder 7-Zip. 
+            \item \textbf{Unity\_Windows\_Build.zip}:\\
+            Bei diesem ZIP-Verzeichnis handelt es sich um den gepackten Ordner, welcher von Unity selbst bei der Erstellung des Windows-Builds generiert wird. Dieser ist mit einem beliebigen Packprogramm zu entpacken und enthält dann eine ausführbare Anwendung. Da das Verzeichnis nach Beendigen des Spiels nicht gelöscht wird, bleiben bei diesem Ansatz auch Spieleeinstellungen sitzungsübergreifend erhalten.
+        \end{enumerate}
+
+\begin{bclogo}[logo=\bcattention, noborder=true, barre=none]{Wichtig!}
+    Da es sich bei dem Programm um ein selten aus dem Internet heruntergeladenes Programm handelt, ist es möglich, dass sowohl der Browser beim Download vor dem Programm warnt, sowie Windows beim Starten des Programms eine entsprechende Warnung anzeigt. Sollte es sich bei der Warnung um die unten abgebildete Warnung des \textit{Windows Defender SmartScreen} handeln, so muss zuerst auf \textit{Weitere Informationen} geklickt werden, um eine Taste zum Ausführen des Programms erscheinen zu lassen.
+\end{bclogo}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=65mm]{Figures/win-smartscreen.png}
+\end{figure}
+
+
+\section{MacOS}
+
+Das Asset mit dem Namen \textbf{Unity\_MacOS\_Build.zip} von der Github-Seite des Projekts unter \url{https://github.com/fabian12943/Frog-and-Friends/releases} herunterladen und entpacken. Im entpackten Ordner befindet sich dann eine auf dem MacOS per Doppelklick ausführbare .app-Datei mit dem Namen \textit{FrogAndFriends}.
+
+\section{Ohne Installation}
+
+Möchte man das Spiel ohne Installation spielen, so kann man das Spiel auch unter folgendem Link im Browser spielen: \url{https://fabian12943.itch.io/frog-friends}. Hierbei ist nur sicherzustellen, dass der verwendete Browser WebGL-Inhalte unterstützt, da sich das Spiel sonst möglicherweise gar nicht oder nur ohne Ton spielen lässt. 
